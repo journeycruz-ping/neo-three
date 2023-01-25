@@ -40,7 +40,7 @@ function init() {
                     trigger: "#trigger",
                     start: "+=150px",
                     end: "+=360px",
-                    markers: true,
+                    markers: false,
                     scrub: true,
                     toggleActions: "restart pause resume pause"
                 },
@@ -64,10 +64,9 @@ function init() {
     document.getElementById("c").appendChild(renderer.domElement);
 
     controls = new THREE.OrbitControls(camera, renderer.domElement);
-    controls.enableDamping = true; //拖拉慣性
-    controls.enableZoom = false; //相機變焦移動
-    controls.enablePan = false; //相機平移
-
+    controls.enableDamping = true;
+    controls.enableZoom = false;
+    controls.enablePan = false;
 }
 
 function animate() {
@@ -76,31 +75,31 @@ function animate() {
     renderer.render(scene, camera);
 }
 
-let videos = document.getElementsByTagName("video");
-
-function checkScroll() {
-    let fraction = 0.001;
-
-    let video = videos[0];
-
-    let x = video.offsetLeft,
-        y = video.offsetTop,
-        w = video.offsetWidth,
-        h = video.offsetHeight,
-        r = x + w, //right
-        b = y + h, //bottom
-        visibleX, visibleY, visible;
-
-    visibleX = Math.max(0, Math.min(w, window.pageXOffset + window.innerWidth - x, r - window.pageXOffset));
-    visibleY = Math.max(0, Math.min(h, window.pageYOffset + window.innerHeight - y, b - window.pageYOffset));
-
-    visible = visibleX * visibleY / (w * h);
-
-    if (visible > fraction && !video.ended) {
-        video.play();
-    }
-
+function playPauseVideo() {
+    let videos = document.querySelectorAll("video");
+    videos.forEach((video) => {
+        video.muted = true;
+        let playPromise = video.play();
+        if (playPromise !== undefined) {
+            playPromise.then((_) => {
+                let observer = new IntersectionObserver(
+                    (entries) => {
+                        entries.forEach((entry) => {
+                            if (
+                                entry.intersectionRatio !== 1 &&
+                                !video.paused
+                            ) {
+                                video.pause();
+                            } else if (video.paused) {
+                                video.play();
+                            }
+                        });
+                    }, { threshold: 0.2 }
+                );
+                observer.observe(video);
+            });
+        }
+    });
 }
 
-window.addEventListener('scroll', checkScroll, false);
-window.addEventListener('resize', checkScroll, false);
+playPauseVideo();
