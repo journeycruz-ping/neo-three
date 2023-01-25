@@ -194,7 +194,7 @@ p {
 
 #c {
     position: absolute;
-    top: -500px !important;
+    top: -500px;
     max-width: 1375px;
     height: 200px;
 }
@@ -224,8 +224,23 @@ canvas {
     height: 90px;
 }
 
-@media screen and (max-width: 1450px) {
+@media screen and (min-width: 1720px) {
     #c {
-        top: -480px !important;
+        top: -400px !important;
+    }
+}
+
+@media screen and (min-width: 1900px) {
+    #c {
+        top: -300px !important;
+    }
+}
+
+@media screen and (min-width: 2100px) {
+    #c {
+        top: -300px !important;
+    }
+    .video-bg {
+        padding-top: 300px;
     }
 }
