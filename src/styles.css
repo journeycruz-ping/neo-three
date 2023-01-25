@@ -194,7 +194,7 @@ p {
 
 #c {
     position: absolute;
-    top: -520px;
+    top: -500px !important;
     max-width: 1375px;
     height: 200px;
 }
@@ -222,4 +222,10 @@ canvas {
 
 .head-spacer {
     height: 90px;
+}
+
+@media screen and (max-width: 1450px) {
+    #c {
+        top: -480px !important;
+    }
 }
