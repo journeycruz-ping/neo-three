@@ -6,6 +6,14 @@
 }
 
 @font-face {
+    font-family: 'Gotham Narrow';
+    src: url('/static/fonts/GothamNarrow-Black_Web.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
     font-family: "Gotham";
     src: url('/static/fonts/Gotham-Book_Web.woff2') format('woff2');
     font-weight: 400;
@@ -157,6 +165,24 @@ p {
     margin-bottom: 24px !important;
 }
 
+.display-103 {
+    font-family: "Gotham Narrow", helvetica, sans-serif;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 48px;
+    padding-top: 80px;
+    margin-bottom: 16px;
+}
+
+.center {
+    color: rgb(251, 251, 252);
+    display: grid;
+    place-content: center;
+    max-width: 688px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
 .cta-btn {
     font-family: gotham, helvetica, sans-serif;
     font-weight: 350;
@@ -217,7 +243,7 @@ canvas {
 }
 
 .space {
-    height: 1000px;
+    height: 300px;
 }
 
 .head-spacer {
