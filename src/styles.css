@@ -259,10 +259,6 @@ a {
     text-decoration: none;
 }
 
-button {
-    all: unset;
-}
-
 @media screen and (min-width: 1344px) {
     .header__content {
         padding: 0 16px;
