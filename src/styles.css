@@ -263,9 +263,6 @@ a {
     .header__content {
         padding: 0 16px;
     }
-    .btn-group {
-        margin-right: 32px;
-    }
 }
 
 @media screen and (min-width: 1720px) {
