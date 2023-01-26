@@ -255,6 +255,23 @@ video {
     width: 100%;
 }
 
+a {
+    text-decoration: none;
+}
+
+button {
+    all: unset;
+}
+
+@media screen and (min-width: 1344px) {
+    .header__content {
+        padding: 0 16px;
+    }
+    .btn-group {
+        margin-right: 32px;
+    }
+}
+
 @media screen and (min-width: 1720px) {
     #c {
         top: -400px !important;
