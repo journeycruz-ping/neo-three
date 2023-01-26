@@ -39,7 +39,7 @@ function init() {
                 scrollTrigger: {
                     trigger: "#trigger",
                     start: "+=150px",
-                    end: "+=360px",
+                    end: "+=460px",
                     markers: false,
                     scrub: true,
                     toggleActions: "restart pause resume pause"
