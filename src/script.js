@@ -1,4 +1,8 @@
 import "./styles.css";
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+import * as THREE from 'three';
+window.THREE = THREE;
 
 let camera;
 let renderer;
@@ -26,7 +30,7 @@ function init() {
     light.position.set(50, 50, 100);
     scene.add(light);
 
-    const loader = new THREE.GLTFLoader()
+    const loader = new GLTFLoader()
     loader.load(
         'models/neo-v1.glb',
         function(gltf) {
@@ -55,7 +59,7 @@ function init() {
         }
     )
 
-    const loader2 = new THREE.GLTFLoader()
+    const loader2 = new GLTFLoader()
     loader2.load(
         'models/bg-boxes-9.glb',
         function(gltf) {
@@ -91,7 +95,7 @@ function init() {
     renderer.setPixelRatio(window.devicePixelRatio);
     renderer.setSize(window.innerWidth, window.innerHeight * 2);
     document.getElementById("c").appendChild(renderer.domElement);
-    controls = new THREE.OrbitControls(camera, renderer.domElement);
+    controls = new OrbitControls(camera, renderer.domElement);
     controls.enableDamping = true;
     controls.enableZoom = false;
     controls.enablePan = false;
