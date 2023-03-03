@@ -44,15 +44,15 @@ function init() {
     //
 
     const pointLight4 = new THREE.PointLight(0xffffff, 10, 4.5); //green
-    pointLight4.position.set(2.5, 1, 1.5);
+    pointLight4.position.set(1.25, 0.5, 0.75);
     scene.add(pointLight4);
 
     const pointLight5 = new THREE.PointLight(0xffffff, 10, 4.5); //red
-    pointLight5.position.set(2.5, 1, -2);
+    pointLight5.position.set(1.25, 0.5, -1);
     scene.add(pointLight5);
 
     const pointLight6 = new THREE.PointLight(0xffffff, 10, 4.5); //green
-    pointLight6.position.set(0.4, -0.4, 0.5);
+    pointLight6.position.set(0.2, -0.2, 0.25);
     scene.add(pointLight6);
 
     // const pointLight7 = new THREE.PointLight(0xffffff, 10, 10); //red
@@ -133,24 +133,24 @@ function init() {
     document.getElementById("c").appendChild(renderer.domElement);
 
     let offset, travel;
-    if (window.innerWidth >= 400 && window.innerWidth <= 796) {
+    if (window.innerWidth >= 1 && window.innerWidth <= 796) {
         offset = 0.8;
         travel = 0.5;
-        camera.position.set(45, 0, 0);
+        camera.position.set(35, 0, 0);
     } else if (window.innerWidth >= 797 && window.innerWidth <= 1169) {
-        offset = 0.5;
+        offset = 0.3;
         travel = 0.5;
-        camera.position.set(45, 0, 0);
+        camera.position.set(35, 0, 0);
     } else if (window.innerWidth >= 1170 && window.innerWidth <= 1687) {
         offset = 0.3;
         travel = 1;
         camera.position.set(25, 0, 0);
     } else if (window.innerWidth >= 1688 && window.innerWidth <= 2029) {
-        offset = 0;
+        offset = 0.3;
         travel = 1;
         camera.position.set(25, 0, 0);
     } else if (window.innerWidth >= 2030 && window.innerWidth <= 2399) {
-        offset = 0.1;
+        offset = 0.4;
         travel = 1;
         camera.position.set(25, 0, 0);
     } else if (window.innerWidth >= 2400) {
@@ -203,12 +203,12 @@ function init() {
             camera.aspect = width / (922 * 2);
             camera.updateProjectionMatrix();
 
-            if (window.innerWidth >= 400 && window.innerWidth <= 796) {
+            if (window.innerWidth >= 1 && window.innerWidth <= 796) {
                 offset = 0.8;
                 travel = 0.5;
                 camera.position.set(35, 0, 0);
             } else if (window.innerWidth >= 797 && window.innerWidth <= 1169) {
-                offset = 0.5;
+                offset = 0.3;
                 travel = 0.5;
                 camera.position.set(35, 0, 0);
             } else if (window.innerWidth >= 1170 && window.innerWidth <= 1687) {
@@ -216,11 +216,11 @@ function init() {
                 travel = 1;
                 camera.position.set(25, 0, 0);
             } else if (window.innerWidth >= 1688 && window.innerWidth <= 2029) {
-                offset = 0;
+                offset = 0.3;
                 travel = 1;
                 camera.position.set(25, 0, 0);
             } else if (window.innerWidth >= 2030 && window.innerWidth <= 2399) {
-                offset = 0.1;
+                offset = 0.4;
                 travel = 1;
                 camera.position.set(25, 0, 0);
             } else if (window.innerWidth >= 2400) {
