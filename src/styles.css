@@ -369,11 +369,15 @@ a {
 
 @media screen and (max-width: 699px) {
     .row-2,
-    .btn-group {
+    .btn-group,
+    .cta-btn {
         display: none;
     }
     main {
         padding: 0 16px;
+    }
+    .row-1 {
+        padding: 16px;
     }
 }
 
