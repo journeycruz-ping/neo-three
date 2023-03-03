@@ -367,7 +367,7 @@ a {
     text-decoration: none;
 }
 
-@media screen and (max-width: 699px) {
+@media screen and (max-width: 900px) {
     .row-2,
     .btn-group,
     .cta-btn {
