@@ -43,17 +43,21 @@ function init() {
 
     //
 
-    const pointLight4 = new THREE.PointLight(0xffffff, 10, 4.5); //green
+    const pointLight4 = new THREE.PointLight(0xffffff, 10, 10); //green
     pointLight4.position.set(1.25, 0.5, 0.75);
     scene.add(pointLight4);
 
-    const pointLight5 = new THREE.PointLight(0xffffff, 10, 4.5); //red
+    const pointLight5 = new THREE.PointLight(0xffffff, 10, 10); //red
     pointLight5.position.set(1.25, 0.5, -1);
     scene.add(pointLight5);
 
-    const pointLight6 = new THREE.PointLight(0xffffff, 10, 4.5); //green
+    const pointLight6 = new THREE.PointLight(0xffffff, 10, 10); //green
     pointLight6.position.set(0.2, -0.2, 0.25);
     scene.add(pointLight6);
+
+    // const pointLight7 = new THREE.PointLight(0xffffff, 10, 100); //red
+    // pointLight7.position.set(0.15, 0.5, 0);
+    // scene.add(pointLight7);
 
     // const pointLight7 = new THREE.PointLight(0xffffff, 10, 10); //red
     // pointLight5.position.set(5, -2, -4);
@@ -77,19 +81,22 @@ function init() {
     // pointLight9.position.set(1.01, 0.015, 0);
     // scene.add(pointLight9);
 
-    const sphereSize = 1;
-    // const pointLightHelper = new THREE.PointLightHelper(pointLight6, sphereSize);
+    // const sphereSize = 0.1;
+    // const pointLightHelper = new THREE.PointLightHelper(pointLight4, sphereSize);
     // scene.add(pointLightHelper);
 
-    // const pointLightHelper2 = new THREE.PointLightHelper(pointLight7, sphereSize);
+    // const pointLightHelper2 = new THREE.PointLightHelper(pointLight5, sphereSize);
     // scene.add(pointLightHelper2);
 
     // const pointLightHelper3 = new THREE.PointLightHelper(pointLight6, sphereSize);
     // scene.add(pointLightHelper3);
 
+    // const pointLightHelper4 = new THREE.PointLightHelper(pointLight7, sphereSize);
+    // scene.add(pointLightHelper4);
+
     const loader = new GLTFLoader()
     loader.load(
-        'models/neo-final_v1.3.glb',
+        'models/neo-final_v1.9.glb',
         function(gltf) {
 
             scene.add(gltf.scene)
