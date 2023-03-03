@@ -43,15 +43,15 @@ function init() {
 
     //
 
-    const pointLight4 = new THREE.PointLight(0xffffff, 10, 5); //green
+    const pointLight4 = new THREE.PointLight(0xffffff, 10, 4.5); //green
     pointLight4.position.set(2.5, 1, 1.5);
     scene.add(pointLight4);
 
-    const pointLight5 = new THREE.PointLight(0xffffff, 10, 5); //red
+    const pointLight5 = new THREE.PointLight(0xffffff, 10, 4.5); //red
     pointLight5.position.set(2.5, 1, -2);
     scene.add(pointLight5);
 
-    const pointLight6 = new THREE.PointLight(0xffffff, 10, 5); //green
+    const pointLight6 = new THREE.PointLight(0xffffff, 10, 4.5); //green
     pointLight6.position.set(0.4, -0.4, 0.5);
     scene.add(pointLight6);
 

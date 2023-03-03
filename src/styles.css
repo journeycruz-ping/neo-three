@@ -169,7 +169,6 @@ main {
 .row-1 {
     color: rgb(251, 251, 252);
     padding: 235px 32px 80px 150px;
-    max-width: 506px;
 }
 
 h1 {
@@ -366,6 +365,16 @@ video {
 
 a {
     text-decoration: none;
+}
+
+@media screen and (max-width: 699px) {
+    .row-2,
+    .btn-group {
+        display: none;
+    }
+    main {
+        padding: 0 16px;
+    }
 }
 
 @media screen and (min-width: 1344px) {
