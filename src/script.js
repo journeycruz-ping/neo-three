@@ -136,11 +136,11 @@ function init() {
     if (window.innerWidth >= 400 && window.innerWidth <= 796) {
         offset = 0.8;
         travel = 0.5;
-        camera.position.set(35, 0, 0);
+        camera.position.set(45, 0, 0);
     } else if (window.innerWidth >= 797 && window.innerWidth <= 1169) {
         offset = 0.5;
         travel = 0.5;
-        camera.position.set(35, 0, 0);
+        camera.position.set(45, 0, 0);
     } else if (window.innerWidth >= 1170 && window.innerWidth <= 1687) {
         offset = 0.3;
         travel = 1;
